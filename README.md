@@ -1,2 +1,2 @@
 # _BASH_
-Learing Bash Script From Zero To Hero 
+Learing Bash Script From Zero To Hero
