@@ -10,8 +10,8 @@ An educational repository dedicated to compiling, summarizing, and documenting t
 
 ## 🔍 Table of Contents
 * [📂 Repository Contents & Architecture](#-repository-contents--architecture)
-* [🧠 Sandbox Workflow Strategy](#-sandbox-workflow-strategy)
-* [📖 Core Concepts Covered So Far (Videos 1 - 24)](#-core-concepts--code-syntax-covered-videos-1---24)
+* [🧠 Sandbox & Notes Workflow Strategy](#-sandbox--notes-workflow-strategy)
+* [📖 Core Concepts & Code Syntax Covered (Videos 1 - 24)](#-core-concepts--code-syntax-covered-videos-1---24)
 * [📅 Upcoming Topics & Syntax Roadmap (Videos 25 - 50)](#-upcoming-topics--code-syntax-to-do-list-videos-25---50)
 * [🛠️ Recommended Environment](#%EF%B8%8F-recommended-environment)
 * [⚡ Quick Start & Execution](#-quick-start--execution)
@@ -25,32 +25,32 @@ An educational repository dedicated to compiling, summarizing, and documenting t
 > All core assets are located inside the organized development directory: `📁 Data/`
 
 * 📜 **[`Data/notes.sh`](./Data/notes.sh)** — **The Ultimate Study Guide**  
-  An all-in-one structured file containing the clean, documented explanations of the concepts, fully annotated with step-by-step comments.
+  An all-in-one massive reference containing **2,100+ lines of highly detailed explanations**, fully annotated and commented out block-by-block for structural documentation.
   
 * 🧪 **[`Data/bash.sh`](./Data/bash.sh)** — **The Live Playground & Sandbox**  
-  The actual hands-on testing file containing **1,700+ lines of live testing code** where snippets are written and verified in real-time.
+  The actual hands-on testing file containing **1,700+ lines of live execution code** where snippets are written and verified in real-time.
 
 ---
 
-## 🧠 Sandbox Workflow Strategy
+## 🧠 Sandbox & Notes Workflow Strategy
 
-To maximize learning retention, this repository utilizes an interactive **Sandbox-to-Notes** structural logic:
+To maximize learning retention, this repository utilizes an advanced dual-file development ecosystem:
 
 ```text
- 💻 [Write Live Code] ──> 🧪 [Test in bash.sh] ──> ❌ [Fails? Fix Syntax]
-                                 │
-                                 ▼ (Success)
- 📜 [Clean Notes Guide] <── [Comment Out & Save]
+ 💻 [Write Live Code] ──> 🧪 [Execute inside bash.sh] ──> ❌ [Bug? Fix Syntax]
+                                     │
+                                     ▼ (Success Verified)
+ 📜 [Stored safely in notes.sh] <── [Comment Block & Annotate]
 ```
 
 > [!TIP]
-> This dynamic approach ensures every code snippet inside the playground is pre-verified, fully functional, and safely stored for future copy-pasting.
+> This dynamic approach guarantees that all educational code blocks are pre-verified, structurally commented to prevent execution overlapping, and perfectly optimized for future copy-pasting.
 
 ---
 
 ## 📖 Core Concepts & Code Syntax Covered (Videos 1 - 24)
 
-Click on any topic arrow below to expand and view its quick-reference code framework:
+Click on any topic arrow below to expand and view its quick-reference code framework compiled from `notes.sh`:
 
 <details>
 <summary>🚀 <b>01 - 04 | Foundations & Variables</b></summary>
@@ -88,7 +88,7 @@ let x=x+1             # Variable stepping
 <summary>🔀 <b>11 - 15 | Control Flow & File System Tests</b></summary>
 
 ```bash
-if [ \(x -eq 10 ] && [\)y -ne 5 ]; then ...; fi
+if [ \$age -eq 21 ] && [ \$gpa -ge 80 ]; then ...; fi
 if [ -f "file.txt" ] && [ -d "folder" ]; then
     # File flags: -d (dir), -e (exist), -s (not empty), -x (executable)
 fi
@@ -147,7 +147,7 @@ for item in 1 2 3; do echo \$item; done
 ```bash
 while [ condition ]; do
     # commands
-  done
+done
 ```
 </details>
 
@@ -157,7 +157,7 @@ while [ condition ]; do
 ```bash
 until [ condition ]; do
     # runs until condition becomes true
-  done
+done
 ```
 </details>
 
@@ -214,7 +214,7 @@ echo \$REPLY # Default read variable
 ```bash
 select choice in Option1 Option2; do
     echo "You picked \$choice"
-  done
+done
 ```
 </details>
 
@@ -233,7 +233,7 @@ eval \$cmd # Executes the string as a command
 ```bash
 while getopts "u:p:" opt; do
     case opt in u) user=OPTARG;; esac
-  done
+done
 ```
 </details>
 
@@ -301,7 +301,7 @@ chmod +x notes.sh bash.sh
 
 ## 📱 Connect With Me
 
-* **GitHub:** [@crypt1cx01](https://github.com)
+* **GitHub:** [@crypt1cx01](https://github.com/crypt1cx01)
 
 ---
 
