@@ -4,7 +4,17 @@
 
 An educational repository dedicated to compiling, summarizing, and documenting the **Bash Scripting Course Tutorial**. This project serves as a quick, simplified reference for developers and system engineers looking to master task automation in Linux/Unix environments from scratch.
 
-📌 **Original Course Playlist:** [Bash Scripting Course Tutorial on YouTube](https://www.youtube.com/playlist?list=PLBdyyeW_Z41DykncH9zzMk8T7Rm5UlZXd)
+📌 **Original Course Playlist:** [Bash Scripting Course Tutorial on YouTube](https://youtube.com)
+
+---
+
+## 🔍 Table of Contents
+* [📂 Repository Contents & Architecture](#-repository-contents--architecture)
+* [📖 Core Concepts Covered So Far (Videos 1 - 24)](#-core-concepts--code-syntax-covered-videos-1---24)
+* [📅 Upcoming Topics & Syntax Roadmap (Videos 25 - 50)](#-upcoming-topics--code-syntax-to-do-list-videos-25---50)
+* [🛠️ Recommended Environment](#%EF%B8%8F-recommended-environment)
+* [⚡ Quick Start & Execution](#-quick-start--execution)
+* [📱 Connect With Me](#-connect-with-me)
 
 ---
 
@@ -20,38 +30,215 @@ To make the learning process clear, the repository is split into two functional 
 
 ---
 
-## 📖 Core Concepts Covered So Far (Videos 1 - 24)
+## 📖 Core Concepts & Code Syntax Covered (Videos 1 - 24)
 
-Inside the `bash.sh` playground, the following milestones have been successfully implemented and tested:
+Click on any topic arrow below to expand and view its quick-reference code framework:
 
-* 🚀 **01 - 04 | Foundations & Variables:** Terminal emulation, Shebang environment setups, text formatting via `echo -e`, variable constraints, and positional parameters (`$0`, `$1`, `$#`).
-* 🔐 **05 | Interactive Inputs:** Dynamic user capture using `read` flags (`-p` prompts, `-s` silent modes, timeouts `-t`, and array inputs `-a`).
-* 🧮 **06 - 10 | Arithmetic Operators:** Mathematical evaluations using `$(( ))`, command-line evaluation with `expr`, text manipulation (`length`, `index`, `substr`, `match`), logic gates (`AND`/`OR`), floating-point work via `python3`/`awk`, and variable stepping with `let`.
-* 🔀 **11 - 15 | Control Flow (If Statements):** Advanced comparisons (`-eq`, `-ne`, `-gt`, `-lt`), multi-conditional expressions (`&&`, `||`, `!`), and full system file-testing flags (`-d`, `-e`, `-s`, `-r`, `-w`, `-x`, `-f`).
-* 🧩 **16 - 20 | Regular Expressions (Regex Masterclass):** Complete syntax deep-dive alongside successfully verified challenge solutions from **RegexOne** (including decimals, phone numbers, emails, HTML tags, and URL parsers).
-* 🧵 **21 - 22 | String Comparisons:** Pattern matching, empty-string checking via `-z`/`-n`, and alphabetical sorting evaluations (`>` / `<`).
-* 🎛️ **23 - 24 | Case Statements:** Implementing clean decision multi-branch structures, file compression handlers (`*.tar`, `*.zip`), and execution fall-through operators (`;;`, `;&`, and `;;&`).
+<details>
+<summary>🚀 <b>01 - 04 | Foundations & Variables</b></summary>
+
+```bash
+#!/bin/bash
+echo -e "Text \nFormatting"
+my_var="value"       # Custom variables
+echo "Args: \$0 \$1 \$#" # Positional parameters & args count
+```
+</details>
+
+<details>
+<summary>🔐 <b>05 | Interactive Inputs</b></summary>
+
+```bash
+read -p "Enter target: " target
+read -s -t 5 -p "Password (5s timeout): " pass
+read -a array_input
+```
+</details>
+
+<details>
+<summary>🧮 <b>06 - 10 | Arithmetic Operators & Text Manipulation</b></summary>
+
+```bash
+result=\$(( 10 + 5 ))
+expr length "text"    # String length, index, match, substr
+let x=x+1             # Variable stepping
+# Advanced float calculations via python3 / awk
+```
+</details>
+
+<details>
+<summary>🔀 <b>11 - 15 | Control Flow & File System Tests</b></summary>
+
+```bash
+if [ \(x -eq 10 ] && [\)y -ne 5 ]; then ...; fi
+if [ -f "file.txt" ] && [ -d "folder" ]; then
+    # File flags: -d (dir), -e (exist), -s (not empty), -x (executable)
+fi
+```
+</details>
+
+<details>
+<summary>🧩 <b>16 - 20 | Regular Expressions (Regex Masterclass)</b></summary>
+
+```bash
+# Deep-dive with RegexOne challenge solutions
+[[ "user@email.com" =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\$ ]]
+```
+</details>
+
+<details>
+<summary>🧵 <b>21 - 22 | String Comparisons</b></summary>
+
+```bash
+if [ "str1" == "str2" ]; then ...; fi
+if [ -z "\$empty_str" ] || [ -n "\$not_empty" ]; then ...; fi
+if [[ "a" > "b" ]]; then echo "Alphabetical sort"; fi
+```
+</details>
+
+<details>
+<summary>🎛️ <b>23 - 24 | Case Statements</b></summary>
+
+```bash
+case \$file in
+    *.tar) tar -xvf \$file ;;
+    *.zip) unzip \$file ;& # Fall-through operator
+    *) echo "Unknown format" ;;
+esac
+```
+</details>
 
 ---
 
-## 📅 Upcoming Topics (To-Do List: Videos 25 - 50)
+## 📅 Upcoming Topics & Code Syntax (To-Do List: Videos 25 - 50)
 
-The remaining roadmap to complete the course curriculum will cover the following advanced subjects:
+Click on any upcoming topic arrow to preview the syntax framework that will be implemented next:
 
-- [ ] 🔄 **Videos 25 - 27 | For Loop:** Mastering sequence generation, file loops, and nested iterations.
-- [ ] 🔄 **Videos 28 - 29 | While Loop:** Advanced conditional loops and reading files line-by-line.
-- [ ] 🔄 **Video 30 | Until Loop:** Reversing loop logic based on false conditions.
-- [ ] 📦 **Videos 31 - 36 | Arrays:** Defining, indexing, updating, and iterating over continuous data arrays.
-- [ ] 🛠️ **Videos 37 - 40 | Functions:** Encapsulating reusable logic, passing local parameters, and handling return values.
-- [ ] 🌐 **Video 41 | Variable Scopes:** Understanding the core differences between `local`, `export`, and `default` scope levels.
-- [ ] 🛑 **Video 42 | Exit Codes:** Handling script termination states and structural error handling.
-- [ ] ⚙️ **Videos 43 - 44 | Internal Variables:** Deep-dive into standard automation variables.
-- [ ] 🎛️ **Video 45 | Select Keyword:** Creating interactive CLI menus for users easily.
-- [ ] 🧠 **Video 46 | Eval:** Dynamic command execution and argument parsing.
-- [ ] 🔧 **Video 47 | Getopts & Shift:** Parsing custom command-line flags and script parameters.
-- [ ] 🔒 **Video 48 | Declare:** Enforcing strict data-types and read-only attributes on variables.
-- [ ] 🧪 **Video 49 | Practical Lab:** Comprehensive real-world script consolidation.
-- [ ] 🚩 **Video 50 | TryHackMe Challenge:** Applying final skills on dynamic cyber-security labs.
+<details>
+<summary>🔄 <b>Videos 25 - 27 | For Loop</b></summary>
+
+```bash
+for item in 1 2 3; do echo \$item; done
+# Or C-style: for ((i=0; i<10; i++)); do ...; done
+```
+</details>
+
+<details>
+<summary>🔄 <b>Videos 28 - 29 | While Loop</b></summary>
+
+```bash
+while [ condition ]; do
+    # commands
+done
+```
+</details>
+
+<details>
+<summary>🔄 <b>Video 30 | Until Loop</b></summary>
+
+```bash
+until [ condition ]; do
+    # runs until condition becomes true
+done
+```
+</details>
+
+<details>
+<summary>📦 <b>Videos 31 - 36 | Arrays & Associative Arrays</b></summary>
+
+```bash
+my_array=(val1 val2 val3)
+echo \${my_array[0]} # Accessing elements
+declare -A assoc_array # Key-Value mapping
+```
+</details>
+
+<details>
+<summary>🛠️ <b>Videos 37 - 40 | Functions</b></summary>
+
+```bash
+my_function() {
+    echo "Hello \$1" # Passing arguments
+}
+```
+</details>
+
+<details>
+<summary>🌐 <b>Video 41 | Variable Scopes</b></summary>
+
+```bash
+local my_var="private" # Inside functions
+export global_var="public" # Environment-wide
+```
+</details>
+
+<details>
+<summary>🛑 <b>Video 42 | Exit Codes</b></summary>
+
+```bash
+if [ error ]; then exit 1; fi
+echo \$? # Prints status code of last command
+```
+</details>
+
+<details>
+<summary>⚙️ <b>Videos 43 - 44 | Internal & Environment Variables</b></summary>
+
+```bash
+echo \$IFS   # Internal Field Separator
+echo \$REPLY # Default read variable
+```
+</details>
+
+<details>
+<summary>🎛️ <b>Video 45 | Select Keyword</b></summary>
+
+```bash
+select choice in Option1 Option2; do
+    echo "You picked \$choice"
+  done
+```
+</details>
+
+<details>
+<summary>🧠 <b>Video 46 | Eval Command</b></summary>
+
+```bash
+cmd="ls -la"
+eval \$cmd # Executes the string as a command
+```
+</details>
+
+<details>
+<summary>🔧 <b>Video 47 | Getopts & Shift Operators</b></summary>
+
+```bash
+while getopts "u:p:" opt; do
+    case opt in u) user=OPTARG;; esac
+done
+```
+</details>
+
+<details>
+<summary>🔒 <b>Video 48 | Declare Command</b></summary>
+
+```bash
+declare -r read_only_var="locked"
+declare -i integer_var=10
+```
+</details>
+
+<details>
+<summary>🧪 <b>Video 49 | Practical Consolidation Lab</b></summary>
+
+*Consolidating all syntaxes into a unified task automation script.*
+</details>
+
+<details>
+<summary>🚩 <b>Video 50 | TryHackMe Capstone Challenge</b></summary>
+
+*Applying all structures to capture flags and solve live cybersecurity server labs.*
+</details>
 
 ---
 
@@ -85,8 +272,7 @@ chmod +x notes.sh bash.sh
 
 ## 🤝 Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create! Any contributions you make are **greatly appreciated**.
-
+**Greatly appreciated**! If you want to contribute:
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingNotes`)
 3. Commit your Changes (`git commit -m 'Add some AmazingNotes'`)
@@ -97,8 +283,13 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## 📱 Connect With Me
 
-If you have any questions or want to follow my learning journey, feel free to connect:
-* **GitHub:** [@crypt1cx01](https://github.com/crypt1cx01)
+* **GitHub:** [@crypt1cx01](https://github.com)
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
 
 ---
 
