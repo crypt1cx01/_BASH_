@@ -1,6 +1,6 @@
 # 🐚 Learning Bash Script From Zero To Hero
 
-### ⚙️ **Language:** `Bash Script` | 📜 **License:** [`MIT`](./LICENSE) | ⏳ **Status:** `In Progress`
+### ⚙️ **Language:** `Bash Script` | 🛡️ **CI Status:** ![Bash CI](https://github.com) | 📜 **License:** [`MIT`](./LICENSE) | ⏳ **Status:** `In Progress`
 
 An educational repository dedicated to compiling, summarizing, and documenting the **Bash Scripting Course Tutorial**. This project serves as a quick, simplified reference for developers and system engineers looking to master task automation in Linux/Unix environments from scratch.
 
@@ -10,6 +10,7 @@ An educational repository dedicated to compiling, summarizing, and documenting t
 
 ## 🔍 Table of Contents
 * [📂 Repository Contents & Architecture](#-repository-contents--architecture)
+* [🧠 Sandbox Workflow Strategy](#-sandbox-workflow-strategy)
 * [📖 Core Concepts Covered So Far (Videos 1 - 24)](#-core-concepts--code-syntax-covered-videos-1---24)
 * [📅 Upcoming Topics & Syntax Roadmap (Videos 25 - 50)](#-upcoming-topics--code-syntax-to-do-list-videos-25---50)
 * [🛠️ Recommended Environment](#%EF%B8%8F-recommended-environment)
@@ -20,13 +21,30 @@ An educational repository dedicated to compiling, summarizing, and documenting t
 
 ## 📂 Repository Contents & Architecture
 
-To make the learning process clear, the repository is split into two functional parts inside the `Data/` directory:
+> [!NOTE]
+> All core assets are located inside the organized development directory: `📁 Data/`
 
-* 📜 [notes.sh](./Data/notes.sh) — **The Ultimate Study Guide**  
+* 📜 **[`Data/notes.sh`](./Data/notes.sh)** — **The Ultimate Study Guide**  
   An all-in-one structured file containing the clean, documented explanations of the concepts, fully annotated with step-by-step comments.
   
-* 🧪 [bash.sh](./Data/bash.sh) — **The Live Playground & Sandbox**  
-  The actual hands-on testing file containing **1,700+ lines of live testing code** where snippets are written and verified in real-time. Successful test blocks are commented out safely to preserve working examples.
+* 🧪 **[`Data/bash.sh`](./Data/bash.sh)** — **The Live Playground & Sandbox**  
+  The actual hands-on testing file containing **1,700+ lines of live testing code** where snippets are written and verified in real-time.
+
+---
+
+## 🧠 Sandbox Workflow Strategy
+
+To maximize learning retention, this repository utilizes an interactive **Sandbox-to-Notes** structural logic:
+
+```text
+ 💻 [Write Live Code] ──> 🧪 [Test in bash.sh] ──> ❌ [Fails? Fix Syntax]
+                                 │
+                                 ▼ (Success)
+ 📜 [Clean Notes Guide] <── [Comment Out & Save]
+```
+
+> [!TIP]
+> This dynamic approach ensures every code snippet inside the playground is pre-verified, fully functional, and safely stored for future copy-pasting.
 
 ---
 
@@ -129,7 +147,7 @@ for item in 1 2 3; do echo \$item; done
 ```bash
 while [ condition ]; do
     # commands
-done
+  done
 ```
 </details>
 
@@ -139,7 +157,7 @@ done
 ```bash
 until [ condition ]; do
     # runs until condition becomes true
-done
+  done
 ```
 </details>
 
@@ -148,7 +166,7 @@ done
 
 ```bash
 my_array=(val1 val2 val3)
-echo \${my_array[0]} # Accessing elements
+echo \${my_array} # Accessing elements
 declare -A assoc_array # Key-Value mapping
 ```
 </details>
@@ -215,7 +233,7 @@ eval \$cmd # Executes the string as a command
 ```bash
 while getopts "u:p:" opt; do
     case opt in u) user=OPTARG;; esac
-done
+  done
 ```
 </details>
 
