@@ -1,6 +1,6 @@
 # 🐚 Learning Bash Script From Zero To Hero
 
-### ⚙️ **Language:** `Bash Script` | 🛡️ **CI Status:** ![Bash CI](https://github.com) | 📜 **License:** [`MIT`](./LICENSE) | ⏳ **Status:** `In Progress`
+### ⚙️ **Language:** `Bash Script` | 🤖 **CI Automated Check:** `Enabled` | 📜 **License:** [`MIT`](./LICENSE) | ⏳ **Status:** `In Progress`
 
 An educational repository dedicated to compiling, summarizing, and documenting the **Bash Scripting Course Tutorial**. This project serves as a quick, simplified reference for developers and system engineers looking to master task automation in Linux/Unix environments from scratch.
 
@@ -8,21 +8,9 @@ An educational repository dedicated to compiling, summarizing, and documenting t
 
 ---
 
-## 🔍 Table of Contents
-* [📂 Repository Contents & Architecture](#-repository-contents--architecture)
-* [🧠 Sandbox & Notes Workflow Strategy](#-sandbox--notes-workflow-strategy)
-* [📖 Core Concepts & Code Syntax Covered (Videos 1 - 24)](#-core-concepts--code-syntax-covered-videos-1---24)
-* [📅 Upcoming Topics & Syntax Roadmap (Videos 25 - 50)](#-upcoming-topics--code-syntax-to-do-list-videos-25---50)
-* [🛠️ Recommended Environment](#%EF%B8%8F-recommended-environment)
-* [⚡ Quick Start & Execution](#-quick-start--execution)
-* [📱 Connect With Me](#-connect-with-me)
-
----
-
 ## 📂 Repository Contents & Architecture
 
-> [!NOTE]
-> All core assets are located inside the organized development directory: `📁 Data/`
+To make the learning process clear, the repository is split into two functional parts inside the `Data/` directory:
 
 * 📜 **[`Data/notes.sh`](./Data/notes.sh)** — **The Ultimate Study Guide**  
   An all-in-one massive reference containing **2,100+ lines of highly detailed explanations**, fully annotated and commented out block-by-block for structural documentation.
@@ -301,7 +289,7 @@ chmod +x notes.sh bash.sh
 
 ## 📱 Connect With Me
 
-* **GitHub:** [@crypt1cx01](https://github.com/crypt1cx01)
+* **GitHub:** [@crypt1cx01](https://github.com)
 
 ---
 
